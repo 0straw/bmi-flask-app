@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI CALCULATOR</title>
+</head>
+<body style="background-color: aliceblue;"> 
+    <div>
+        <h1><b>BMI CALCULATOR</b></h1>
+        <p align="center"> 
+            <hr/> 
+            <big>Hello, welcome to the site. Here, you will be able to calculate your BMI. 
+            <br/>You will also be able to tell if you are of normal weight, overweight or obese.<br/>
+            But first, we need this information from you: <br/> 
+            <ul>
+                <b>
+                    <li>Your weight in kg</li>
+                    <li>Your height in cm</li>
+                </b>
+            </ul>
+            created by <b>Driller</b>
+            </big>
+        </p>
+
+        <form method="POST">
+            <label>Weight (kg):</label>
+            <input type="text" name="weight" required><br><br>
+            <label>Height (cm):</label>
+            <input type="text" name="height" required><br><br>
+            <input type="submit" value="Calculate BMI">
+        </form>
+
+        {% if bmi %}
+            <h2>Your BMI is: {{ bmi }} kg/m²</h2>
+            <h3>{{ category }}</h3>
+        {% endif %}
+
+        <h2 style="color:red">Good! Now let us proceed.</h2>
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_q0RowphwheVb58-iqQRwtJSddgcKGaj-Uzo9ZQ3gF2xnbmVEAJ6xdr9gmrvuV3oCGwAcFAUEznEzBUifyvPH-PVHQtSeF4M_aYY-iM8FQTrz8x9Vp47QnMFL5VWPeH68HjGCiYNpUr-9btqttTqMvBt8Yw4jlEE7d6geVt2a6lRut9cQN8rf4yvht-Cj/s672/BMI-2.png"
+             height="150px" width="150px" border="2px" align="center" alt="BMI"/>
+    </div>
+</body>
+</html>
